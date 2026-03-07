@@ -1,27 +1,36 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Navbar() {
   return (
-    <header className="w-full flex justify-center pt-6">
-      <nav className="w-[90%] bg-[#E9E4DD] border border-black rounded-xl px-8 py-4 flex items-center justify-between">
+    <div className="w-full flex justify-center pt-6 absolute top-0 z-50">
+      <div className="w-[90%] bg-[#e9e6e1] border border-gray-400 rounded-[30px] px-10 py-4 flex items-center justify-between">
 
         {/* Logo */}
-        <div className="text-xl font-bold">
-          BHARATH SMART STEM
+        <div className="flex items-center">
+          <Image
+            src="/logo.png"
+            alt="Bharat Smart STEM"
+            width={70}
+            height={70}
+            className="object-contain"
+          />
         </div>
 
-        {/* Links */}
-        <ul className="flex gap-10 font-medium text-gray-800">
-          <li className="cursor-pointer">Home</li>
-          <li className="cursor-pointer">About</li>
-          <li className="cursor-pointer">Program</li>
-          <li className="cursor-pointer">STEM Lab Setup</li>
-        </ul>
+        {/* Menu */}
+        <div className="flex gap-12 text-gray-800 font-semibold text-lg">
+          <Link href="/">Home</Link>
+          <Link href="/about">About</Link>
+          <Link href="/program">Program</Link>
+          <Link href="/lab-setup">STEM Lab Setup</Link>
+        </div>
 
         {/* Button */}
         <button className="bg-black text-white px-6 py-2 rounded-lg">
           Contact Us
         </button>
 
-      </nav>
-    </header>
+      </div>
+    </div>
   );
 }
