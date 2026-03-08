@@ -1,26 +1,174 @@
-@import "tailwindcss";
+/* PAGE BACKGROUND GRID */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html, body{
+height:100%;
+margin:0;
+padding:0;
+
+background-color:#f6efe7;
+
+/* checkbox grid background */
+background-image:
+linear-gradient(#d9cfc3 1px, transparent 1px),
+linear-gradient(90deg,#d9cfc3 1px, transparent 1px);
+
+background-size:40px 40px;
+
+font-family: Arial, Helvetica, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+/* STICKERS */
+
+.stickers{
+display:flex;
+align-items:center;
+gap:40px;
+margin-top:35px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.stickers img{
+object-fit:contain;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+/* NAVBAR */
+
+.nav-wrapper{
+width:1200px;
+margin:auto;
+margin-top:30px;
+border:1px solid #333;
+background:white;
+}
+
+.navbar{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:25px 30px;
+}
+
+.nav-links{
+display:flex;
+align-items:center;
+gap:40px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+.contact-btn{
+background:#f58220;
+color:white;
+border:none;
+padding:10px 20px;
+font-weight:600;
+cursor:pointer;
+}
+
+
+/* HERO SECTION */
+
+.hero{
+width:1200px;
+margin:auto;
+margin-top:80px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:40px;
+}
+
+.hero-left{
+max-width:550px;
+}
+
+.tag{
+background:#2f9e44;
+color:white;
+padding:6px 14px;
+font-size:14px;
+display:inline-block;
+margin-bottom:20px;
+}
+
+.hero-left h1{
+font-size:55px;
+line-height:1.1;
+margin-bottom:20px;
+color:#333;
+}
+
+.hero-left p{
+font-size:18px;
+color:#555;
+margin-bottom:25px;
+}
+
+.hero-buttons{
+display:flex;
+gap:20px;
+}
+
+.demo{
+background:#f58220;
+color:white;
+border:none;
+padding:12px 20px;
+font-weight:600;
+cursor:pointer;
+}
+
+.partner{
+border:1px solid black;
+background:white;
+padding:12px 20px;
+cursor:pointer;
+}
+
+.hero-right img{
+width:450px;
+height:auto;
+}
+
+
+/* GREEN STATS BAR */
+
+.stats{
+width:100%;
+margin-top:80px;
+}
+
+.stats-box{
+background:#1f9a4b;
+display:flex;
+justify-content:space-around;
+align-items:center;
+padding:15px 0;
+color:white;
+}
+
+.stat{
+text-align:center;
+}
+
+.stat h2{
+font-size:32px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.stat p{
+font-size:12px;
+letter-spacing:1px;
+}
+
+.divider{
+width:1px;
+height:40px;
+background:rgba(255,255,255,0.6);
 }

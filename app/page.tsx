@@ -1,53 +1,107 @@
+import Image from "next/image"
+
 export default function Home() {
   return (
-    <main className="relative bg-[#f0f9ff] min-h-screen text-black">
-      {/* Grid Background Overlay */}
-      <div
-        className="absolute inset-0 z-0 opacity-10 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-        }}
-      ></div>
+    <>
+      <section className="hero">
 
-      <div className="relative z-10 max-w-7xl mx-auto px-10 pt-20 flex flex-col md:flex-row items-center">
-        
-        {/* Left Side: Text */}
-        <div className="md:w-1/2">
-          <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-bold">
-            Trusted by 50+ Schools
+        <div className="hero-left">
+
+          <span className="tag">
+            TRUSTED BY 50+ SCHOOLS
           </span>
 
-          <h1 className="text-5xl md:text-6xl font-black mt-6 leading-tight text-black">
-            Empowering India Through Hands-On STEM Learning
+          <h1>
+            Empowering India <br />
+            Through Hands-On <br />
+            STEM Learning
           </h1>
 
-          <p className="text-xl mt-6 text-black">
+          <p>
             Practical Learning for the Next Generation
           </p>
 
-          <div className="flex gap-4 mt-10">
-            <button className="bg-[#222] text-white px-8 py-4 rounded-xl font-bold hover:scale-105 transition-transform">
-              Book a free demo
+          <div className="hero-buttons">
+
+            <button className="demo">
+              BOOK A FREE DEMO
             </button>
 
-            <button className="border-2 border-gray-300 bg-white/50 px-8 py-4 rounded-xl font-bold hover:bg-white transition-all text-black">
-              Partner with us
+            <button className="partner">
+              PARTNER WITH US
             </button>
+
           </div>
+
+          {/* STICKERS */}
+
+          <div className="stickers">
+
+            <Image
+              src="/certificate.png"
+              alt="certificate"
+              width={200}
+              height={140}
+            />
+
+            <Image
+              src="/stem-accredited.png"
+              alt="stem accredited"
+              width={200}
+              height={90}
+            />
+
+          </div>
+
         </div>
 
-        {/* Right Side: Image Placeholder */}
-        <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
-          <div className="w-full h-[400px] bg-gray-200 rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
-            <div className="flex items-center justify-center h-full text-black italic">
-              Main Project Image Placeholder
-            </div>
-          </div>
+        <div className="hero-right">
+          <Image
+            src="/hero.jpg"
+            alt="students"
+            width={450}
+            height={500}
+          />
         </div>
 
-      </div>
-    </main>
-  );
+      </section>
+
+      {/* GREEN STATS BAR */}
+
+      <section className="stats">
+
+        <div className="stats-box">
+
+          <div className="stat">
+            <h2>10,000+</h2>
+            <p>STUDENTS EMPOWERED</p>
+          </div>
+
+          <div className="divider"></div>
+
+          <div className="stat">
+            <h2>50</h2>
+            <p>SCHOOLS PARTNERED</p>
+          </div>
+
+          <div className="divider"></div>
+
+          <div className="stat">
+            <h2>500</h2>
+            <p>TEACHERS TRAINED</p>
+          </div>
+
+          <div className="divider"></div>
+
+          <div className="stat">
+            <h2>5</h2>
+            <p>YEARS OF INNOVATION</p>
+          </div>
+
+        </div>
+
+      </section>
+
+    </>
+  )
 }

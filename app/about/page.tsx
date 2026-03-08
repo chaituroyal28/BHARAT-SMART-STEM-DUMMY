@@ -1,15 +1,15 @@
-import Navbar from "@/components/Navbar";
-
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#e6d6c4]">
+    <div className="site-container">
 
-      <Navbar />
-
-      <div className="pt-40 px-10">
-        <h1 className="text-6xl font-bold">
-          Empowering India
+      <div className="pt-20 px-16">
+        <h1 className="text-6xl font-bold text-black">
+          Empowering India Through Hands-On STEM Learning
         </h1>
+
+        <p className="text-xl mt-4 text-black">
+          Practical Learning for the Next Generation
+        </p>
       </div>
 
     </div>
