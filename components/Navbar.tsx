@@ -6,14 +6,16 @@ export default function Navbar() {
     <div className="nav-wrapper">
       <div className="navbar">
 
-        <div className="logo">
-          <Image
-            src="/logo.png"
-            alt="logo"
-            width={110}
-            height={50}
-          />
-        </div>
+        {/* LOGO */}
+
+        <Image
+          src="/logo.png"
+          alt="Bharat Smart STEM"
+          width={120}
+          height={50}
+        />
+
+        {/* NAV LINKS */}
 
         <div className="nav-links">
           <Link href="/">HOME</Link>

@@ -4,6 +4,7 @@ html, body{
 height:100%;
 margin:0;
 padding:0;
+overflow-x: hidden;
 
 background-color:#f6efe7;
 
@@ -35,11 +36,13 @@ object-fit:contain;
 /* NAVBAR */
 
 .nav-wrapper{
-width:1200px;
+max-width: 1200px;
+width:100%;
 margin:auto;
 margin-top:30px;
 border:1px solid #333;
 background:white;
+border-radius:20px;
 }
 
 .navbar{
@@ -74,7 +77,8 @@ cursor:pointer;
 /* HERO SECTION */
 
 .hero{
-width:1200px;
+max-width:1200px;
+width: 100%;
 margin:auto;
 margin-top:80px;
 display:flex;
@@ -130,45 +134,132 @@ padding:12px 20px;
 cursor:pointer;
 }
 
-.hero-right img{
+
+/* HERO RIGHT SIDE */
+
+.hero-right{
+position:relative;
+width:450px;
+}
+
+.main-img{
+border-radius:20px;
 width:450px;
 height:auto;
 }
 
 
-/* GREEN STATS BAR */
+/* FLOATING LABELS */
 
-.stats{
-width:100%;
-margin-top:80px;
+.label{
+position:absolute;
+padding:8px 16px;
+border-radius:12px;
+font-size:14px;
+font-weight:500;
+white-space:nowrap;
 }
 
-.stats-box{
-background:#1f9a4b;
-display:flex;
-justify-content:space-around;
-align-items:center;
-padding:15px 0;
+.after{
+top:-30px;
+left:110px;
+background:#2b79c2;
 color:white;
 }
 
+.iot{
+top:80px;
+left:-95px;
+background:#222;
+color:white;
+}
+
+.robotics{
+bottom:20px;
+left:-85px;
+background:#2b79c2;
+color:white;
+}
+
+.stem{
+bottom:120px;
+right:-80px;
+background:white;
+color:#333;
+box-shadow:0 6px 12px rgba(0,0,0,0.15);
+}
+
+
+/* FLOATING IMAGES */
+
+.floating{
+position:absolute;
+width:70px;
+height:70px;
+border-radius:14px;
+object-fit:cover;
+box-shadow:0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* image positions exactly like Figma */
+
+.img1{
+top:10px;
+right:-110px;
+}
+
+.img2{
+top:110px;
+right:-150px;
+}
+
+.img3{
+top:210px;
+right:-110px;
+}
+
+.img4{
+top:310px;
+right:-150px;
+}
+
+.img5{
+top:410px;
+right:-110px;
+}
+
+
+
+.stats-box{
+width:1800px;
+background:#1f9a4b;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 50px;
+color:white;
+border-radius:0px;
+height: 100px;
+}
+
 .stat{
+flex:1;
 text-align:center;
 }
 
 .stat h2{
-font-size:32px;
-font-weight:bold;
+font-size:44px;
+font-weight:700;
 margin-bottom:10px;
 }
 
 .stat p{
-font-size:12px;
+font-size:14px;
 letter-spacing:1px;
 }
 
 .divider{
 width:1px;
-height:40px;
+height:70px;
 background:rgba(255,255,255,0.6);
 }
